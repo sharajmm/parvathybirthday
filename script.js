@@ -139,7 +139,7 @@ function toggleSong() {
     audio1Playing = true;
     gifContainer.classList.remove('hidden');
     icon.textContent = '⏸️';
-    btn.innerHTML = '<span id="musicIcon">⏸️</span> Pause Song';
+    btn.innerHTML = '<span id="musicIcon">⏸️</span> HAHA YOU got Rick rolled';
 
     audio1.onended = () => {
       audio1Playing = false;
