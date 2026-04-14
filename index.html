@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Happy Birthday Parvathy! 🎀🍓</title>
+<meta name="description" content="A special birthday surprise for the most amazing best friend ever!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Music Loop -->
+<audio id="bgMusic" loop preload="auto"><source src="assets/music/oii ahh blue song 17 seconds.mp3" type="audio/mpeg"></audio>
+<!-- Audio1 for last section -->
+<audio id="audio1" preload="auto"><source src="assets/music/audio1.mp3" type="audio/mpeg"></audio>
+
+<!-- Mute Button -->
+<button id="muteBtn" class="mute-btn" onclick="toggleGlobalMute()">🔊</button>
+
+<!-- Floating elements container -->
+<div id="floatingElements"></div>
+
+<!-- ===== SCREEN 1: WELCOME / TAP TO START ===== -->
+<section id="screen-welcome" class="screen active">
+  <div class="welcome-content">
+    <div class="kitty-bounce">🎀</div>
+    <h1 class="welcome-title">You've Got a Surprise!</h1>
+    <p class="welcome-sub">from your bestie 💗</p>
+    <img src="assets/hello kitty saying ha ha ha ha.gif" alt="Hello Kitty" class="welcome-gif">
+    <button id="btnStart" class="btn-cute btn-glow" onclick="startWebsite()">
+      Tap to Open 🎁
+    </button>
+    <div class="sparkle-row">🍓✨🌸✨🍓</div>
+  </div>
+</section>
+
+<!-- ===== SCREEN 2: QUESTION 1 ===== -->
+<section id="screen-q1" class="screen">
+  <div class="question-content">
+    <img src="assets/cat walking from far and gives rose flowers for you and going back.gif" alt="Cat with flowers" class="q-gif">
+    <h2 class="q-title">First things first...</h2>
+    <p class="q-text">Do you know you're the most amazing person ever? 🌹</p>
+    <div class="btn-row">
+      <button class="btn-cute btn-yes" onclick="answerYes('screen-q1','screen-q2')">Yes, obviously 💅</button>
+      <button class="btn-cute btn-no" id="noBtn1">No 😤</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCREEN 3: QUESTION 2 ===== -->
+<section id="screen-q2" class="screen">
+  <div class="question-content">
+    <img src="assets/cat shaking head.gif" alt="Cat shaking head" class="q-gif">
+    <h2 class="q-title">Be honest now...</h2>
+    <p class="q-text">Are you ready to have the BEST birthday ever?? 🎂</p>
+    <div class="btn-row">
+      <button class="btn-cute btn-yes" onclick="answerYes('screen-q2','screen-q3')">YESSS!! 🥳</button>
+      <button class="btn-cute btn-no" id="noBtn2">Nah 🙄</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCREEN 4: QUESTION 3 ===== -->
+<section id="screen-q3" class="screen">
+  <div class="question-content">
+    <img src="assets/cat laughing.gif" alt="Cat laughing" class="q-gif">
+    <h2 class="q-title">One more thing...</h2>
+    <p class="q-text">Will you promise to smile for the rest of your life? 😊</p>
+    <div class="btn-row">
+      <button class="btn-cute btn-yes" onclick="answerYes('screen-q3','screen-main')">Pinky Promise! 🤙</button>
+      <button class="btn-cute btn-no" id="noBtn3">Maybe not 😒</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAIN SCROLLABLE CONTENT ===== -->
+<section id="screen-main" class="screen screen-scroll">
+
+  <!-- Birthday Header -->
+  <div class="main-header">
+    <img src="assets/hello-kitty saying happy-birthday.gif" alt="Happy Birthday" class="hb-gif">
+    <h1 class="main-title">Happy Birthday<br><span class="name-highlight">Parvathy!</span></h1>
+    <p class="main-date">🎀 Your special day 🎀</p>
+  </div>
+
+  <!-- The "I'm Here" Section — Old Scroll Style -->
+  <div class="scroll-card">
+    <div class="scroll-body">
+      <h2 class="scroll-title">If No One Listens...</h2>
+      <p class="scroll-text">
+        I know life hasn't always been fair to you. I know there were nights you cried alone, 
+        and days you had to be strong when you shouldn't have had to be. 
+        I know about the father who wasn't there, about people who should have protected you but didn't, 
+        about hearts that were broken when they were still learning to love.
+      </p>
+      <p class="scroll-text" style="font-size:1.15em; font-weight:600; color:#8b4513;">
+        But hear me when I say this:
+      </p>
+      <div class="promise-box-scroll">
+        <p>If no one listens to you — <strong>I will.</strong></p>
+        <p>If no one shows up for you — <strong>I'm here.</strong></p>
+        <p>If no one protects you — <strong>I'll try my best.</strong></p>
+        <p>You can rely on me. Always. 🩷</p>
+      </div>
+      <p class="scroll-text">
+        You are not defined by the people who hurt you. You are defined by how beautifully 
+        you survived, how gently you still love, and how bravely you wake up every single day. 
+        You're a freaking warrior in a Hello Kitty outfit. 🎀🗡️
+      </p>
+    </div>
+  </div>
+
+  <!-- Image Carousel -->
+  <div class="card carousel-card">
+    <h2 class="card-title">Our Memories</h2>
+    <div class="carousel-container">
+      <div class="carousel-track" id="imageCarousel">
+        <div class="carousel-slide"><img src="assets/images/1.jpg" alt="Memory 1"></div>
+        <div class="carousel-slide"><img src="assets/images/2.jpg" alt="Memory 2"></div>
+        <div class="carousel-slide"><img src="assets/images/3.jpg" alt="Memory 3"></div>
+        <div class="carousel-slide"><img src="assets/images/4.jpg" alt="Memory 4"></div>
+        <div class="carousel-slide"><img src="assets/images/5.jpg" alt="Memory 5"></div>
+        <div class="carousel-slide"><img src="assets/images/6.jpg" alt="Memory 6"></div>
+        <div class="carousel-slide"><img src="assets/images/7.jpg" alt="Memory 7"></div>
+        <div class="carousel-slide"><img src="assets/images/8.jpg" alt="Memory 8"></div>
+      </div>
+      <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">❮</button>
+      <button class="carousel-btn next-btn" onclick="moveCarousel(1)">❯</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </div>
+
+  <!-- Music + GIF Section -->
+  <div class="card music-card" id="musicSection">
+    <h2 class="card-title">A Little Song For You</h2>
+    <p class="card-text">Press play and vibe~ 💕</p>
+    <div id="musicGifContainer" class="music-gif-container hidden">
+      <img src="assets/gif to play when she plays music.gif" alt="Vibing" class="music-gif">
+    </div>
+    <button id="playSongBtn" class="btn-cute btn-music" onclick="toggleSong()">
+      <span id="musicIcon">▶️</span> Play Song
+    </button>
+  </div>
+
+  <!-- Videos Section -->
+  <div class="card videos-card">
+    <h2 class="card-title">Check These Out</h2>
+    <div class="videos-scroll">
+      <div class="video-box" id="vbox1">
+        <video id="vid1" src="assets/videos/video1.mp4" playsinline webkit-playsinline preload="metadata" onclick="toggleVideo(this)"></video>
+        <div class="video-overlay" onclick="toggleVideo(document.getElementById('vid1'))">▶️ Play</div>
+      </div>
+      <div class="video-box" id="vbox2">
+        <video id="vid2" src="assets/videos/video2.mp4" playsinline webkit-playsinline preload="metadata" onclick="toggleVideo(this)"></video>
+        <div class="video-overlay" onclick="toggleVideo(document.getElementById('vid2'))">▶️ Play</div>
+      </div>
+      <div class="video-box" id="vbox3">
+        <video id="vid3" src="assets/videos/video3.mp4" playsinline webkit-playsinline preload="metadata" onclick="toggleVideo(this)"></video>
+        <div class="video-overlay" onclick="toggleVideo(document.getElementById('vid3'))">▶️ Play</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final Message -->
+  <div class="card final-card">
+    <div class="final-emoji">🎂</div>
+    <h2 class="final-title">Happy Birthday, Parvathy 🎀</h2>
+    <p class="card-text">
+      In a world full of temporary people, I'm your permanent one. 
+      No matter how chaotic life gets, no matter who comes and goes — 
+      I'm not going anywhere. You're stuck with me forever. 
+    </p>
+    <p class="card-text" style="text-align:center; font-size:1.3em; font-weight:700; color:#e75480;">
+      Here's to YOU. 🥂🍓🎀
+    </p>
+    <p class="final-sign">— From your Secret Santa 🩷</p>
+  </div>
+
+  <footer class="site-footer">
+    <p>Made with 💗 and too much brainrot</p>
+    <p>🍓🎀🌸 Happy Birthday 🌸🎀🍓</p>
+  </footer>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
