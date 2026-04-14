@@ -12,9 +12,9 @@
 <body>
 
 <!-- Background Music Loop -->
-<audio id="bgMusic" loop preload="auto"><source src="assets/music/oii ahh blue song 17 seconds.mp3" type="audio/mpeg"></audio>
+<audio id="bgMusic" loop preload="metadata"><source src="assets/music/oii ahh blue song 17 seconds.mp3" type="audio/mpeg"></audio>
 <!-- Audio1 for last section -->
-<audio id="audio1" preload="auto"><source src="assets/music/audio1.mp3" type="audio/mpeg"></audio>
+<audio id="audio1" preload="none"><source src="assets/music/audio1.mp3" type="audio/mpeg"></audio>
 
 <!-- Mute Button -->
 <button id="muteBtn" class="mute-btn" onclick="toggleGlobalMute()">🔊</button>
@@ -117,14 +117,14 @@
     <h2 class="card-title">Our Memories</h2>
     <div class="carousel-container">
       <div class="carousel-track" id="imageCarousel">
-        <div class="carousel-slide"><img src="assets/images/1.jpg" alt="Memory 1"></div>
-        <div class="carousel-slide"><img src="assets/images/2.jpg" alt="Memory 2"></div>
-        <div class="carousel-slide"><img src="assets/images/3.jpg" alt="Memory 3"></div>
-        <div class="carousel-slide"><img src="assets/images/4.jpg" alt="Memory 4"></div>
-        <div class="carousel-slide"><img src="assets/images/5.jpg" alt="Memory 5"></div>
-        <div class="carousel-slide"><img src="assets/images/6.jpg" alt="Memory 6"></div>
-        <div class="carousel-slide"><img src="assets/images/7.jpg" alt="Memory 7"></div>
-        <div class="carousel-slide"><img src="assets/images/8.jpg" alt="Memory 8"></div>
+        <div class="carousel-slide"><img src="assets/images/1.jpg" alt="Memory 1" loading="lazy"></div>
+        <div class="carousel-slide"><img src="assets/images/2.jpg" alt="Memory 2" loading="lazy"></div>
+        <div class="carousel-slide"><img src="assets/images/3.jpg" alt="Memory 3" loading="lazy"></div>
+        <div class="carousel-slide"><img src="assets/images/4.jpg" alt="Memory 4" loading="lazy"></div>
+        <div class="carousel-slide"><img src="assets/images/5.jpg" alt="Memory 5" loading="lazy"></div>
+        <div class="carousel-slide"><img src="assets/images/6.jpg" alt="Memory 6" loading="lazy"></div>
+        <div class="carousel-slide"><img src="assets/images/7.jpg" alt="Memory 7" loading="lazy"></div>
+        <div class="carousel-slide"><img src="assets/images/8.jpg" alt="Memory 8" loading="lazy"></div>
       </div>
       <button class="carousel-btn prev-btn" onclick="moveCarousel(-1)">❮</button>
       <button class="carousel-btn next-btn" onclick="moveCarousel(1)">❯</button>
@@ -137,7 +137,7 @@
     <h2 class="card-title">A Little Song For You</h2>
     <p class="card-text">Press play and vibe~ 💕</p>
     <div id="musicGifContainer" class="music-gif-container hidden">
-      <img src="assets/gif to play when she plays music.gif" alt="Vibing" class="music-gif">
+      <img src="assets/gif to play when she plays music.gif" alt="Vibing" class="music-gif" loading="lazy">
     </div>
     <button id="playSongBtn" class="btn-cute btn-music" onclick="toggleSong()">
       <span id="musicIcon">▶️</span> Play Song
